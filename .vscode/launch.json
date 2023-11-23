@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "runtimeArgs": [
+        "--no-warnings",
+        "--loader",
+        "ts-node/esm",
+        "--experimental-specifier-resolution=node"
+      ],
+      "program": "${workspaceFolder}/main.js",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Current file",
+      "runtimeArgs": [
+        "--no-warnings",
+        "--loader",
+        "ts-node/esm",
+        "--experimental-specifier-resolution=node"
+      ],
+      "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.js",
+      "console": "integratedTerminal"
+    }
+  ]
+}
